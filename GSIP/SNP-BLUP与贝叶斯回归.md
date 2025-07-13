@@ -21,7 +21,7 @@
 ## &#9352;标记解释的总遗传方差
 
 $$
-\sigma_{a0}^2 = \frac{\sigma_u^2}{2 \sum\limits_i^{nsnp} p_i q_i}
+\sigma_{a0}^2 = \frac{\sigma_u^2}{2 \sum\limits_i^{nsnp} p_i q_i}\tag{1}
 $$
 
 * $2 \sum\limits_i^{nsnp} p_i q_i\hat{a}^2_i$会**低估**总遗传方差。
@@ -95,4 +95,13 @@ $$
 $$
 \mathbf{R} = \mathbf{I} \otimes \mathbf{R}_0 \quad \text{和} \quad \mathbf{D} = \mathbf{I} \otimes \mathbf{S}_{a0}
 $$
+
+### &#9314;BLUP-SNP中的方差组分
+
+MME假设已知两个方差组分的值：$\sigma_a^2$与$\sigma_e^2$。
+
+* 通过公式1求标记方差，其中$\sigma_u^2$来自早期系谱研究，$p$来自遗传方差估计的群体。
+* 多性状：$\mathbf{G_0}$代替性状间遗传协方差矩阵。
+
+### &#9315;标记效应求解
 
