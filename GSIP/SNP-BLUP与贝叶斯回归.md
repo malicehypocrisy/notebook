@@ -295,8 +295,7 @@ $$
 # 九、VanRaden 非线性方法
 
 $$
-
-\sigma_{a i}^{2}=\sigma_{a 0}^{2}\left(c^\left(\frac{|\widehat{a}_{i}|}{\text{sd}\left(\widehat{a}_{1},\dots,\widehat{a}_{n}\right)}-2\right)\right)
+\sigma_{a i}^{2}=\sigma_{a 0}^{2}\left(c^\left(\frac{|\widehat{a}_{i}|}{\text{sd}\left(\widehat{a}_{1},\dots,\widehat{a}_{n}\right)}-2\right)\right)
 $$
 
 ## &#9352;**“曲率”参数 c 的取值范围**
@@ -331,19 +330,15 @@ $$
 
 MCMC链收敛后（通常舍前 $n$ 次预热迭代）：
 
-- 育种值估计 \(\tilde{u}
+- 育种值估计 $\tilde{u}_i$
+  = 个体 $i$ 所有选代育种值的后验均值
   $$
-  _i\)
-  = 个体 \(i\) 所有选代育种值的后验均值：
-  \[
   \tilde{u}_i = \frac{1}{T} \sum_{t=1}^{T} \tilde{u}_{i}^{(t)}
+  \text{   ;T为有效选代次数）}
   $$
-  \]
-  （\(T\) 为有效选代次数）
   
-- 后验方差 \(\text{Var}(\tilde{u}_i)\)
-  = 个体 \(i\) 育种值样本的方差：
-  \[
+- 后验方差 $\text{Var}(\tilde{u}_i)$
+  = 个体 $i$育种值样本的方差：
   $$
   \text{Var}(\tilde{u}_i) = \frac{1}{T-1} \sum_{t=1}^{T} \left( \tilde{u}_{i}^{(t)} - \tilde{u}_i \right)^2
   $$
